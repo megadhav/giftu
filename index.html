@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <div class="scene active" id="scene1">
+    <h1>Happy Birthday Golu 🎉</h1>
+    <button onclick="goToScene(2)">Chal</button>
+  </div>
+
+<div class="scene" id="scene2">
+    <h1>Chal cake kapu, euuu</h1>
+  
+    <img id="wholeCake" src="files/full cake.png" class="cake" />
+  
+    <img id="cuttingCake" src="files/cake cutting.png" class="cake hidden" />
+  
+    <button onclick="cutCake()">Kaap lvkr</button>
+    <button id="nextAfterCut" onclick="goToScene(4)" class="hidden">Happy Birthday Dear Golu</button>
+  </div>
+  </div>
+
+<div class="scene" id="scene4">
+    <h1>Heh ghe majhyakadun🙈</h1>
+    <img src="files/feeding cke.png" alt="Cake ghe" class="feed-image" />
+    <p>tujhya sarkha goad aahe na</p>
+    <button onclick="goToScene(5)">Chal</button>
+  </div>
+
+<div class="scene" id="scene5">
+    <h1>Yeeeeeee 🤗</h1>
+    <div class="hug-container">
+      <img src="files/hug.png" class="hug-img"/>
+    </div>
+    <p>Aali na tu pn</p>
+    <button onclick="goToScene(6)">Chal</button>
+  </div>
+  
+  <div class="scene" id="scene6">
+    <h1>Aaplya sathi</h1>
+    <img src="files/badges.png" alt="Badge" class="badge" />
+    <p>Tujhaa first birthday majhyasobat, yesssss</p>
+    <button onclick="goToScene(7)">Chal</button>
+  </div>
+  
+<div class="scene" id="scene7">
+  
+    <div id="nicknameTitle">
+      <h1>Tu mala kay mhante sang</h1>
+    </div>
+  
+    <div id="nicknameInputs">
+      <input type="text" id="nameInput" placeholder="_ _ _ _ _ _" />
+      <button onclick="checkName()">Submit</button>
+      <p id="nicknameResponse"></p>
+    </div>
+  
+    <div id="donkeyGift" class="hidden">
+      <img src="files/gift donkey.png" alt="Gadhav" class="donkey-img" onclick="revealGift()" />
+    </div>
+  
+    <div id="loveLetter" class="hidden">
+      <h2>Tujhyasathi</h2>
+      <p class="letter">
+       Kasla bhari aahe na <strong>Pillya</strong> aani <strong>Gadhv</strong>, Tu first gadhav bollis tevha tula vala hota me chidloy, raag nahi aala hoy vicharla hota, me mhantla avala mala 🙈.<br>
+        Once Again Happy Birthday Golu 💖
+        Love you💖
+      </p>
+      <button onclick="goToScene(1)">Ajun Ekda</button>
+    </div>
+  
+  </div>
+  
+<script src="script.js"></script>
+</body>
+</html>
